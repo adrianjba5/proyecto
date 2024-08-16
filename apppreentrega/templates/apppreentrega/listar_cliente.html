@@ -1,0 +1,27 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+<div class="d-flex justify-content-center">
+
+    <div>
+    {% for cliente in clientes %}
+    <p>Cliente:
+        {{ cliente.nombre }} {{ cliente.apellido }}  {{ cliente.correo}}
+        {% if request.user.is_superuser %}
+        <a href="{% url 'ActualizarClientes' cliente.pk %}"> Actualizar </a>
+        <a href="{% url 'BorrarClientes' cliente.pk %}"> BORRAR </a>
+        {%endif%}
+    </p>
+    
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+

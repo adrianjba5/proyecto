@@ -1,0 +1,25 @@
+{% extends "apppreentrega/base.html" %}
+{% load static %}
+{% block titulo %}
+    Editar perfil
+{% endblock %}
+{% block Cuerpo %}
+
+
+<div class="d-flex justify-content-center">
+
+    <div>
+        <p class="fs-5 fw-bold">{{ msg_login }}</p>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <a class="btn btn-primary " href="{% url 'CambiarContraseña' %}">Cambiar Pass</a>
+            <input type="submit" value="Actualizar">
+        </form>
+    </div>
+
+</div>
+{% endblock%}

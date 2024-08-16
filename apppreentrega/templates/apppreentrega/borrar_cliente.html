@@ -1,0 +1,17 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+
+    <form action="" method="POST">
+        {% csrf_token%}
+    <p>Estas seguro que deseas borrar este cliente: 
+        {{client.nombre}} {{client.apellido}}
+    </p>
+    <input type="submit" value="Eliminar">
+    <a href="{% url 'ListarClientes'%}"> Volver </a>
+    </form>
+
+{% endblock %}

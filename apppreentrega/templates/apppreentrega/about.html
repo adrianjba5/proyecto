@@ -1,0 +1,41 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">ONE IMMIGRANT</h2>
+                    <h3 class="section-subheading text-muted">Somos Especialista en Aplicaciones Migratorias.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>                                        
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'apppreentrega/assets/img/about/1.jpg'%}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2019-2020</h4>
+                                <h4 class="subheading">Nuestro humildes comienzos</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Somos un equipo capacitado en temas migratorios en los mejores institutos en el Estado de la Florida. Desde el 2020, hemos logrado asesorar y asistir de manera satisfactoria a cientos de clientes en los Estados Unidos.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'apppreentrega/assets/img/about/2.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Agosto 2024</h4>
+                                <h4 class="subheading">Nuestra Agencia Nacio</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Con la experiencia de tener cientos de clientes satisfechos a nivel nacional atendidos desde el 20. Somos una empresa nacida para ayudar al migrante  a relizar sus sueños</p></div>
+                        </div>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </div>
+        </section>
+{% endblock%}

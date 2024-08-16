@@ -1,0 +1,23 @@
+{% extends "apppreentrega/base.html"%}
+{% load static %}
+{%block titulo%}
+    CLIENTES
+{% endblock%}
+{%block Cuerpo%}
+<div class="d-flex justify-content-center">
+
+    <div>
+        {% if request.user.is_superuser %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
+            {{form.as_table}}
+            </table>
+            <input type="submit" value="REGISTRAR">
+        </form>
+        {% else %}
+        <p>{{request.user.username}} {{request.user.last_name}}, Usted  No puede registrar nuevos usuarios, debe loguearse desde una cuenta administrador</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock%}
